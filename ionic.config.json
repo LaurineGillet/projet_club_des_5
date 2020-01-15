@@ -1,5 +1,7 @@
 {
   "name": "projet_club_des_5",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
