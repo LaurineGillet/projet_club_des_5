@@ -1,17 +1,24 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      Accueil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+      <img class="logo_main" src="/assets/img/heykeep_logo.png" alt="Logo HeyKeep" />
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-item>
+          <ion-avatar slot="end">
+            <img src="/assets/img/aurelien.png">
+          </ion-avatar>
+          <ion-label>Aurélien</ion-label>
+          <ion-icon name="settings"></ion-icon>
+        </ion-item>
+        <ion-card-subtitle>{{title}}</ion-card-subtitle>
+        <ion-card-title>Bienvenue Sur HeyKeep</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
