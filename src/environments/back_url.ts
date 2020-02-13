@@ -1,4 +1,4 @@
-export const BACK_URL = {
-    // BASE_URL: "http://myApiUrl/",
-    BASE_URL: "http://localhost:3000/",
+export const API_URL = {
+    USER: "user"
 };
+

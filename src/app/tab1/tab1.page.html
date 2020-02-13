@@ -14,7 +14,8 @@
           <ion-avatar slot="end">
             <img src="/assets/img/aurelien.png">
           </ion-avatar>
-          <ion-label>Aurélien</ion-label>
+          <ion-label *ngIf="user">{{user.name}}</ion-label>
+          <ion-label *ngIf="!user">Bonjour enculé</ion-label>
           <ion-icon name="settings"></ion-icon>
         </ion-item>
         <ion-card-subtitle>{{title}}</ion-card-subtitle>
