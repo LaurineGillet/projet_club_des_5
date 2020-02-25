@@ -10,7 +10,10 @@ import { RouterModule } from '@angular/router';
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: HeaderPage }])
+    RouterModule.forChild([{path: '', component: HeaderPage}])
+  ],
+  exports: [
+    HeaderPage
   ],
   declarations: [HeaderPage]
 })
