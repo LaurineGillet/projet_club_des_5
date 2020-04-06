@@ -1,75 +1,78 @@
 ion-img {
-  width: 50px;
-  margin: auto;
+    width: 50px;
+    margin: auto;
 }
+
 ion-title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-  width: auto;
-  position: relative;
-  top: 30px;
-  padding: 10px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    width: auto;
+    position: relative;
+    top: 30px;
+    padding: 10px;
+}
+
+.log_error {
+    background: white;
+    border: 3px solid red;
+    padding: 5px;
 }
 
 .main {
-  height: 100%;
-  width: 100%;
-  background-color: white;
-
-  .inscription {
-    height: auto;
-    position: relative;
-    top: 250px;
-    ion-title {
-      font-size: 35px;
-    }
-    button {
-      color: white;
-      background: #d74850;
-      font-size: 24px;
-      width: 207px;
-      height: 58px;
-      border-radius: 50px;
-      top: 50px;
-      position: relative;
-      margin-left: 20%;
-    }
-  }
-
-  .logForm {
-    position: absolute;
-    top: 80px;
+    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-
-    form {
-      width: 80%;
-      height: 200px;
-      margin-top: 75px;
-      background-image: url(../../assets/img/background/illustration.png);
-      background-size: 100%;
-      ion-input {
-        color: white;
-        background-color: #323441;
-        border-radius: 30px;
-        padding: 5px;
-        height: 50px;
-        margin: 15px 0;
-
-        padding-left: 15px !important;
-      }
-      button {
-        width: 207px;
-        height: 58px;
-        border-radius: 50px;
-        color: white;
-        background: #d74850;
-        font-size: 24px;
-        margin-left: 15%;
-        margin-top: 35px;
-      }
+    background-color: white;
+    .inscription {
+        height: auto;
+        position: relative;
+        top: 250px;
+        ion-title {
+            font-size: 35px;
+        }
+        button {
+            color: white;
+            background: #d74850;
+            font-size: 24px;
+            width: 207px;
+            height: 58px;
+            border-radius: 50px;
+            top: 50px;
+            position: relative;
+            margin-left: 20%;
+        }
     }
-  }
+    .logForm {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        form {
+            width: 80%;
+            height: 200px;
+            margin-top: 75px;
+            background-image: url(../../assets/img/background/illustration.png);
+            background-size: 100%;
+            ion-input {
+                color: white;
+                background-color: #323441;
+                border-radius: 30px;
+                padding: 5px;
+                height: 50px;
+                margin: 15px 0;
+                padding-left: 15px !important;
+            }
+            button {
+                width: 207px;
+                height: 58px;
+                border-radius: 50px;
+                color: white;
+                background: #d74850;
+                font-size: 24px;
+                margin-left: 15%;
+                margin-top: 35px;
+            }
+        }
+    }
 }
