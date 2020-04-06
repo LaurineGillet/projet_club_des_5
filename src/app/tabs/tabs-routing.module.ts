@@ -8,12 +8,12 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'dashboard',
         children: [
           {
             path: 'tabs',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../dashboard/dashboard.module').then(m => m.DashboardPageModule)
           }
         ]
       },
@@ -47,16 +47,9 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: '/tabs',
-        redirectTo: 'tabs/tab1',
-        pathMatch: 'full'
-      }
-    ]
-  },
   {
-    path: '/tabs',
-    redirectTo: 'tabs/tab1',
+    path: '',
+    redirectTo: '/tabs/dashboard',
     pathMatch: 'full'
   }
 ];
