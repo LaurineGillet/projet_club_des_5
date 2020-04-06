@@ -4,6 +4,7 @@ import { FormMdpComponent } from './formMdp/form-mdp.component';
 import { FormPseudoComponent } from './formPseudo/form-pseudo.component';
 import { FormBirthdayComponent } from './formBirthday/form-birthday.component';
 import { User } from 'src/entity/User';
+import { UserService } from 'src/services/providers/User.service';
 
 @Component({
   selector: 'app-form-register-layout',
@@ -19,14 +20,13 @@ export class FormRegisterLayoutComponent implements OnInit {
     userRegister: User = {
       email: null,
       password: null,
-      password_confirmation: null,
-      // pseudo: null,
-      // birthday: null
+      passwordConfirmation: null,
+      name: null,
     };
     chooseComponent = 1;
 
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
   decrementePage() {
       if (this.chooseComponent > 1 ) {
@@ -42,9 +42,8 @@ export class FormRegisterLayoutComponent implements OnInit {
     this.userRegister = {
       email: this.email.mail,
       password: this.mdp.mdp,
-      password_confirmation: this.mdp.mdpConfirmation,
-      // pseudo: this.pseudo.pseudo,
-      // birthday: this.birthday.birthday
+      passwordConfirmation: this.mdp.mdpConfirmation,
+      name: this.pseudo.pseudo,
     };
     this.chooseComponent ++;
     console.log(this.userRegister);
@@ -54,7 +53,10 @@ export class FormRegisterLayoutComponent implements OnInit {
     const data = new FormData();
     data.append("email", this.email.mail);
     data.append("password", this.mdp.mdp);
-    data.append("password_confirmation", this.mdp.mdpConfirmation);
+    data.append("passwordConfirmation", this.mdp.mdpConfirmation);
+    data.append("name", this.pseudo.pseudo);
+
+    this.userService.register(data).subscribe();
   }
 
 

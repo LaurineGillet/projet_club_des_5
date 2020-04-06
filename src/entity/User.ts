@@ -12,6 +12,6 @@ export interface User {
     isActif?: boolean;
     categories?: [];
 
-    password_confirmation?: string;
+    passwordConfirmation?: string;
 
 }
