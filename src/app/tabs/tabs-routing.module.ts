@@ -11,7 +11,7 @@ const routes: Routes = [
         path: 'dashboard',
         children: [
           {
-            path: '',
+            path: 'tabs',
             loadChildren: () =>
               import('../dashboard/dashboard.module').then(m => m.DashboardPageModule)
           }
@@ -21,7 +21,7 @@ const routes: Routes = [
         path: 'tab2',
         children: [
           {
-            path: '',
+            path: 'tabs',
             loadChildren: () =>
               import('../tab2/tab2.module').then(m => m.Tab2PageModule)
           }
@@ -31,7 +31,7 @@ const routes: Routes = [
         path: 'tab3',
         children: [
           {
-            path: '',
+            path: 'tabs',
             loadChildren: () =>
               import('../tab3/tab3.module').then(m => m.Tab3PageModule)
           }
@@ -41,19 +41,12 @@ const routes: Routes = [
         path: 'tab4',
         children: [
           {
-            path: '',
+            path: 'tabs',
             loadChildren: () =>
                 import('../tab4/tab4.module').then(m => m.Tab4PageModule)
           }
         ]
       },
-      {
-        path: '',
-        redirectTo: '/tabs/dashboard',
-        pathMatch: 'full'
-      }
-    ]
-  },
   {
     path: '',
     redirectTo: '/tabs/dashboard',

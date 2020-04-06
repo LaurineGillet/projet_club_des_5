@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="../../assets/img/k.png"></ion-img>
+  </ion-toolbar>
+  <ion-progress-bar value="0.5"></ion-progress-bar>
+</ion-header>
+<div class="main">
+  <div [hidden]="chooseComponent !== 1">
+    <app-form-mail #formMail ></app-form-mail>
+  </div>
+  <div [hidden]="chooseComponent !== 2">
+    <app-form-mdp #formMdp></app-form-mdp>
+  </div>
+  <div [hidden]="chooseComponent !== 3">
+    <app-form-pseudo #formPseudo></app-form-pseudo>
+  </div>
+  <div [hidden]="chooseComponent !== 4">
+    <app-form-birthday #formBirthday></app-form-birthday>
+  </div>
+  <div [hidden]="chooseComponent !== 5">
+    <app-form-recap #formBirthday [userRegister]="userRegister"></app-form-recap>
+  </div>
+  <div class="button">
+    <button *ngIf="chooseComponent  > 1" class="retour" (click)="decrementePage()">retour</button>
+    <button *ngIf="chooseComponent < 4" class="suivant" (click)="incrementePage()">suivant</button>
+    <button *ngIf="chooseComponent === 4" class="suivant" (click)="checkRecap()">suivant</button>
+    <button *ngIf="chooseComponent === 5" class="suivant" (click)="register()">Soumettre</button>
+  </div>
+</div>

@@ -19,7 +19,23 @@ export class UserService extends RequestHttpService {
       .get(this.serverUrl + API_URL.USER + "/" + idUser, this.httpOptions)
       .pipe(
         map((res: any) => res),
-        catchError(this.handleError("getUser", []))
+        catchError(this.handleError("getUser", null))
       );
+  }
+
+  login(userLogin: FormData): Observable<any> {
+    return this.http
+      .post(this.serverUrl + API_URL.LOGIN, userLogin)
+      .pipe(
+        map((res: any) => res),
+        catchError(this.handleError("login", null))
+      );
+  }
+
+  register(user: FormData): Observable<User> {
+    return this.http.post(this.serverUrl + API_URL.REGISTER, user).pipe(
+      map((res: User) => res),
+      catchError(this.handleError("register", null))
+    );
   }
 }

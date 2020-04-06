@@ -1,7 +1,23 @@
 <ion-header>
     <ion-toolbar>
-      <ion-title>
-        Login Page
-      </ion-title>
+        <ion-img src="../../assets/img/k.png"></ion-img>
     </ion-toolbar>
   </ion-header>
+  <ion-title>
+    Se Connecter
+  </ion-title>
+  <div class="main">
+    <div class="logForm">
+      <form (ngSubmit)="logForm()">
+        <ion-input type="text" [(ngModel)]="user.email" name="mail" placeholder="Identifiant (adresse mail)"></ion-input>
+        <ion-input type="password" [(ngModel)]="user.password" name="password" placeholder="Mot de passe"></ion-input>
+        <button ion-button type="submit" block>Connexion ></button>
+      </form>
+    </div>
+    <div class="inscription">
+      <ion-title >
+        Pas Encore Inscrit ?
+      </ion-title>
+      <button ion-button  [routerLink]="['/register']"  block>Inscription ></button>
+    </div>
+  </div>

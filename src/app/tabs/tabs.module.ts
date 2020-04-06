@@ -7,15 +7,18 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 import {HeaderPageModule} from "../header/header.module";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-    imports: [
+  imports: [
         IonicModule,
         CommonModule,
         FormsModule,
         TabsPageRoutingModule,
         HeaderPageModule
-    ],
-  declarations: [TabsPage]
+  ],
+  declarations: [TabsPage],
+  entryComponents: [TabsPage],
+  bootstrap: [TabsPage]
 })
 export class TabsPageModule {}

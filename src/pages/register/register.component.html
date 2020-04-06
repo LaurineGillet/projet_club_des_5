@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-img src="../../assets/img/k.png"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="title">
+    <p class="intro">Votre inscription est un parcours</p>
+    <p class="etapes">5 étapes</p>
+  </div>
+  <div class="liste">
+    <ul>
+      <li *ngFor="let etape of etapes">
+        <div class="number">{{etape.id}}</div>
+        <div class="libelle">{{etape.libelle}}</div>
+      </li>
+    </ul>
+  </div>
+  <button ion-button [routerLink]="['/register/form']"  block>C’EST PARTI ></button>
+</ion-content>
